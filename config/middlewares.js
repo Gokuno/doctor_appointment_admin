@@ -25,8 +25,9 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://directorio-doctores.vercel.app'], // Allow this specific origin
+      origin: ['http://localhost:3000', 'https://directorio-doctores.vercel.app'], // Add both local and production URLs
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS', 'HEAD'],
+      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
     },
   },
   'strapi::poweredBy',
